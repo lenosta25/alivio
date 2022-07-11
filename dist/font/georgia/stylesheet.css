@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Georgia Pro';
+    src: url('GeorgiaPro-Light.eot');
+    src: local('Georgia Pro Light'), local('GeorgiaPro-Light'),
+        url('GeorgiaPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('GeorgiaPro-Light.woff2') format('woff2'),
+        url('GeorgiaPro-Light.woff') format('woff'),
+        url('GeorgiaPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Georgia Pro';
+    src: url('GeorgiaPro-Bold.eot');
+    src: local('Georgia Pro Bold'), local('GeorgiaPro-Bold'),
+        url('GeorgiaPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GeorgiaPro-Bold.woff2') format('woff2'),
+        url('GeorgiaPro-Bold.woff') format('woff'),
+        url('GeorgiaPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

@@ -1,0 +1,66 @@
+@import "_reset.scss";
+$theme-color: #01996d;
+$bg-color: #245852;
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 1370px;
+  padding: 0 15px 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  &__nav {
+    &-list {
+      display: flex;
+      color: #292929;
+      line-height: 24px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    li + li {
+      padding-left: 70px;
+    }
+    a:hover {
+      color: $theme-color;
+    }
+  }
+  &__login {
+    display: flex;
+    align-items: center;
+    &-enter {
+      color: #000000;
+    }
+    &-enter:hover {
+      color: $theme-color;
+    }
+    &-registration {
+      width: 183px;
+      height: 51px;
+      border-radius: 4px;
+      background: $theme-color;
+      text-align: center;
+      a {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 51px;
+        color: #ffffff;
+      }
+    }
+    &-registration:hover {
+      opacity: 0.9;
+    }
+  }
+  &__login > * + * {
+    margin-left: 35px;
+  }
+}
