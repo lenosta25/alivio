@@ -111,51 +111,127 @@ body {
   margin: 0 auto;
 }
 
-.header {
+.btn {
+  width: 227px;
+  height: 65px;
+  border-radius: 4px;
+  background: #01996d;
+  text-align: center;
+}
+.btn a {
+  color: #ffffff;
+  line-height: 65px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.deskription {
+  line-height: 31.4px;
+  color: #484848;
+}
+
+h1,
+h2 {
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  color: #01996d;
+}
+
+.header__top {
+  border-bottom: 1px solid #d6d6d6;
+}
+.header__top-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
 }
-.header__nav-list {
+.header__top-inner .nav__list {
   display: flex;
   color: #292929;
   line-height: 24px;
   font-weight: 500;
   transition: color 0.2s ease;
 }
-.header__nav li + li {
+.header__top-inner .nav__list li + li {
   padding-left: 70px;
 }
-.header__nav a:hover {
+.header__top-inner .nav__list a {
+  position: relative;
+}
+.header__top-inner .nav__list a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #01996d;
+  transition: 0.2s;
+}
+.header__top-inner .nav__list a:hover {
   color: #01996d;
 }
-.header__login {
+.header__top-inner .nav__list a:hover::before {
+  width: 100%;
+  left: 0;
+}
+.header__top-inner .login {
   display: flex;
   align-items: center;
 }
-.header__login-enter {
+.header__top-inner .login__enter {
   color: #000000;
 }
-.header__login-enter:hover {
+.header__top-inner .login__enter:hover {
   color: #01996d;
 }
-.header__login-registration {
+.header__top-inner .login__registration {
   width: 183px;
   height: 51px;
-  border-radius: 4px;
-  background: #01996d;
-  text-align: center;
 }
-.header__login-registration a {
-  font-weight: 400;
-  font-size: 20px;
+.header__top-inner .login__registration a {
   line-height: 51px;
-  color: #ffffff;
 }
-.header__login-registration:hover {
+.header__top-inner .login__registration:hover {
   opacity: 0.9;
 }
-.header__login > * + * {
+.header__top-inner .login > * + * {
   margin-left: 35px;
+}
+.header__banner-content {
+  min-height: 895px;
+  max-width: 440px;
+  padding: 175px 0;
+}
+.header__banner-title {
+  font-size: 65px;
+  line-height: 73.85px;
+}
+.header__banner-title + * {
+  margin-top: 30px;
+}
+.header__banner-deskription {
+  max-width: 420px;
+}
+.header__banner-deskription + * {
+  margin-top: 54px;
+}
+.header__banner-bg {
+  z-index: -1;
+  position: absolute;
+  top: 111px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.header__banner-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

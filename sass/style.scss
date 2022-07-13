@@ -13,54 +13,132 @@ body {
   padding: 0 15px 0 15px;
   margin: 0 auto;
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0;
-  &__nav {
-    &-list {
-      display: flex;
-      color: #292929;
-      line-height: 24px;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-    li + li {
-      padding-left: 70px;
-    }
-    a:hover {
-      color: $theme-color;
-    }
+.btn {
+  width: 227px;
+  height: 65px;
+  border-radius: 4px;
+  background: $theme-color;
+  text-align: center;
+  a {
+    color: #ffffff;
+    line-height: 65px;
+    font-weight: 400;
+    font-size: 20px;
   }
-  &__login {
-    display: flex;
-    align-items: center;
-    &-enter {
-      color: #000000;
-    }
-    &-enter:hover {
-      color: $theme-color;
-    }
-    &-registration {
-      width: 183px;
-      height: 51px;
-      border-radius: 4px;
-      background: $theme-color;
-      text-align: center;
-      a {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 51px;
-        color: #ffffff;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.deskription {
+  line-height: 31.4px;
+  color: #484848;
+}
+// используетмя в секции Our product
+h1,
+h2 {
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  color: $theme-color;
+}
+.header {
+  &__top {
+    border-bottom: 1px solid #d6d6d6;
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+      .nav {
+        &__list {
+          display: flex;
+          color: #292929;
+          line-height: 24px;
+          font-weight: 500;
+          transition: color 0.2s ease;
+          li + li {
+            padding-left: 70px;
+          }
+          a {
+            position: relative;
+          }
+          a::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            width: 0%;
+            height: 2px;
+            background: $theme-color;
+            transition: 0.2s;
+          }
+          a:hover {
+            color: $theme-color;
+          }
+          a:hover::before {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+      .login {
+        display: flex;
+        align-items: center;
+        &__enter {
+          color: #000000;
+        }
+        &__enter:hover {
+          color: $theme-color;
+        }
+        &__registration {
+          width: 183px;
+          height: 51px;
+          a {
+            line-height: 51px;
+          }
+        }
+        &__registration:hover {
+          opacity: 0.9;
+        }
+      }
+      .login > * + * {
+        margin-left: 35px;
       }
     }
-    &-registration:hover {
-      opacity: 0.9;
+  }
+  &__banner {
+    &-content {
+      min-height: 895px;
+      max-width: 440px;
+      padding: 175px 0;
+    }
+    &-title {
+      font-size: 65px;
+      line-height: 73.85px;
+    }
+    &-title + * {
+      margin-top: 30px;
+    }
+    &-deskription {
+      max-width: 420px;
+    }
+    &-deskription + * {
+      margin-top: 54px;
+    }
+    &-bg {
+      z-index: -1;
+      position: absolute;
+      top: 111px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
-  &__login > * + * {
-    margin-left: 35px;
-  }
+}
+
+.main {
 }

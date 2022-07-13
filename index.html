@@ -7,30 +7,58 @@
     <link rel="stylesheet" href="./dist/font/georgia/stylesheet.css" />
     <link rel="stylesheet" href="./dist/font/lato/stylesheet.css" />
     <link rel="stylesheet" href="./dist/style.css" />
-
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="header">
-          <img class="header__logo" src="/img/logo.svg" alt="logo" />
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li><a href="#">Why Alivio</a></li>
-              <li><a href="#">Solutions</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Pricing</a></li>
-            </ul>
-          </nav>
-          <div class="header__login">
-            <a class="header__login-enter" href="#">Sign in</a>
-            <div class="header__login-registration">
-              <a href="#">Start Trial</a>
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="header__top-inner">
+            <img class="logo" src="/img/logo.svg" alt="logo" />
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__list-item">
+                  <a href="#">Why Alivio</a>
+                </li>
+                <li class="nav__list-item">
+                  <a href="#">Solutions</a>
+                </li>
+                <li class="nav__list-item">
+                  <a href="#">Community</a>
+                </li>
+                <li class="nav__list-item">
+                  <a href="#">Pricing</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="login">
+              <a class="login__enter" href="#">Sign in</a>
+              <div class="login__registration btn">
+                <a href="#">Start Trial</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="header__banner">
+        <div class="container">
+          <div class="header__banner-content">
+            <h1 class="header__banner-title">Be aware, Manage well.</h1>
+            <p class="header__banner-deskription deskription">
+              Everyone experiences stress in different ways. Let Alivio guide
+              you, in a personalized journal experience, to overcome your
+              stress.
+            </p>
+            <div class="btn">
+              <a href="#">Find Your Way</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__banner-bg">
+          <img src="/img/main-bg.png" alt="background picture" />
+        </div>
+      </div>
     </header>
+    <main class="main"></main>
   </body>
 </html>
