@@ -6,6 +6,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
+  line-height: 30px;
 }
 .container {
   width: 100%;
@@ -39,6 +40,23 @@ h2 {
   font-family: "Georgia", sans-serif;
   font-weight: 700;
   color: $theme-color;
+}
+h2{
+  font-size: 50px;
+  line-height: 78.5px;
+}
+h3{
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: #000000;
+}
+h4{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 37.68px;
+  color: #424242;
 }
 .header {
   &__top {
@@ -106,8 +124,12 @@ h2 {
     }
   }
   &__banner {
+    height: 895px;
+    background-image: url("../img/banner-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     &-content {
-      min-height: 895px;
       max-width: 440px;
       padding: 175px 0;
     }
@@ -124,21 +146,62 @@ h2 {
     &-deskription + * {
       margin-top: 54px;
     }
-    &-bg {
-      z-index: -1;
-      position: absolute;
-      top: 111px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+ 
+  }
+}
+main{
+  .how-it-works {
+    margin-top: 156px;
+    &__top {
+      &-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
+      &-headline {
+        max-width: 584px;
+      }
+      &-text {
+        max-width: 671px;
+        padding-left: 30px;
+      }
+    }
+    &__columns {
+      padding-top: 187px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      max-width: 392px;
+      &-headline {
+        text-align: center;
+        padding-bottom: 55px;
+        position: relative;
+        padding-left: 15px;
+      }
+      &-headline::before{
+        content: attr(data-number);
+        position: absolute;
+        left: 0;
+        top: -40px;
+        font-size: 150px;
+        font-weight: 400;
+        color: $theme-color;
+        opacity: 0.2;
+      }
+      &-text {
+        padding-bottom: 37px ;
+      }
+      &-picture {
+        border-radius: 12px;
+      }
+    }
+    &__item:nth-child(2){
+      padding-top: 287px;
+    }
+    &__item:nth-child(3){
+      padding-top: 54px;
     }
   }
 }
-
-.main {
-}
+ 
