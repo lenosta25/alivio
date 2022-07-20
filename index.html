@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./dist/font/georgia/stylesheet.css" />
     <link rel="stylesheet" href="./dist/font/lato/stylesheet.css" />
+    <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="./dist/style.css" />
-    <title>Document</title>
+
+    <title>Alivio</title>
   </head>
   <body>
     <header class="header">
@@ -33,9 +35,7 @@
             </nav>
             <div class="login">
               <a class="login__enter" href="#">Sign in</a>
-              <div class="login__registration btn">
-                <a href="#">Start Trial</a>
-              </div>
+              <button class="login__registration btn">Start Trial</button>
             </div>
           </div>
         </div>
@@ -49,9 +49,7 @@
               you, in a personalized journal experience, to overcome your
               stress.
             </p>
-            <div class="btn">
-              <a href="#">Find Your Way</a>
-            </div>
+            <button class="btn">Find Your Way</button>
           </div>
         </div>
       </div>
@@ -75,7 +73,7 @@
           </div>
           <div class="how-it-works__columns">
             <div class="how-it-works__item">
-              <h3 class="how-it-works__item-headline" data-number="01">
+              <h3 class="how-it-works__item-caption" data-number="01">
                 Personalize
               </h3>
               <p class="how-it-works__item-text">
@@ -90,7 +88,7 @@
               />
             </div>
             <div class="how-it-works__item">
-              <h3 class="how-it-works__item-headline" data-number="02">
+              <h3 class="how-it-works__item-caption" data-number="02">
                 Write & Understand
               </h3>
               <p class="how-it-works__item-text">
@@ -104,7 +102,7 @@
               />
             </div>
             <div class="how-it-works__item">
-              <h3 class="how-it-works__item-headline" data-number="03">
+              <h3 class="how-it-works__item-caption" data-number="03">
                 Alivio!
               </h3>
               <p class="how-it-works__item-text">
@@ -120,6 +118,54 @@
           </div>
         </div>
       </section>
+      <section class="results-alivio">
+        <div class="container">
+          <div class="results-alivio__row">
+            <div class="results-alivio__content">
+              <h2 class="results-alivio__content-headline">
+                Let's hear about Kayla's success story
+              </h2>
+              <p class="results-alivio__content-text">
+                See how well Alivio works in a real customer’s life.
+              </p>
+              <button class="results-alivio__content-btn btn">
+                Let’s get started
+              </button>
+            </div>
+            <div
+              class="results-alivio__video"
+              id="video"
+              data-src="https://www.youtube.com/embed/hlcSBHzPk8s?autoplay=1"
+            >
+              <img
+                class="results-alivio__video-poster"
+                id="video-poster"
+                src="./img/poster.png"
+                alt="video poster"
+              />
+
+              <button class="results-alivio__video-btn" id="video-btn">
+                <svg
+                  class="svg"
+                  width="82"
+                  height="82"
+                  viewBox="0 0 82 82"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M41.3715 0.407043C19.0808 0.407043 0.948334 18.5413 0.948334 40.8302C0.948334 63.1192 19.0808 81.2534 41.3715 81.2534C63.6622 81.2534 81.7947 63.1192 81.7947 40.8302C81.7947 18.5413 63.6622 0.407043 41.3715 0.407043ZM41.3715 77.8849C20.9395 77.8849 4.31688 61.2623 4.31688 40.8302C4.31688 20.3982 20.9395 3.77559 41.3715 3.77559C61.8036 3.77559 78.4262 20.3982 78.4262 40.8302C78.4262 61.2623 61.8036 77.8849 41.3715 77.8849Z"
+                  />
+                  <path
+                    d="M57.4419 39.414L33.8618 24.2553C33.3453 23.9182 32.6775 23.9 32.1446 24.1928C31.6017 24.4889 31.2662 25.0548 31.2662 25.6715V55.9889C31.2662 56.6057 31.6017 57.1716 32.1446 57.4677C32.3946 57.6043 32.6742 57.6733 32.9505 57.6733C33.2663 57.6733 33.5855 57.5844 33.8618 57.4052L57.4419 42.2465C57.9223 41.9373 58.215 41.4026 58.215 40.8302C58.215 40.2578 57.9223 39.7233 57.4419 39.414ZM34.6347 52.9032V28.7573L53.4154 40.8302L34.6347 52.9032Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="/main.js"></script>
   </body>
 </html>

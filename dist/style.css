@@ -118,8 +118,6 @@ body {
   border-radius: 4px;
   background: #01996d;
   text-align: center;
-}
-.btn a {
   color: #ffffff;
   line-height: 65px;
   font-weight: 400;
@@ -214,8 +212,6 @@ h4 {
 .header__top-inner .login__registration {
   width: 183px;
   height: 51px;
-}
-.header__top-inner .login__registration a {
   line-height: 51px;
 }
 .header__top-inner .login__registration:hover {
@@ -272,13 +268,13 @@ main .how-it-works__columns {
 main .how-it-works__item {
   max-width: 392px;
 }
-main .how-it-works__item-headline {
+main .how-it-works__item-caption {
   text-align: center;
   padding-bottom: 55px;
   position: relative;
   padding-left: 15px;
 }
-main .how-it-works__item-headline::before {
+main .how-it-works__item-caption::before {
   content: attr(data-number);
   position: absolute;
   left: 0;
@@ -299,4 +295,66 @@ main .how-it-works__item:nth-child(2) {
 }
 main .how-it-works__item:nth-child(3) {
   padding-top: 54px;
+}
+main .results-alivio {
+  padding: 229px 0 176px;
+  background: #245852;
+  margin-top: 51px;
+}
+main .results-alivio__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .results-alivio__content {
+  max-width: 580px;
+}
+main .results-alivio__content-headline {
+  color: #ffffff;
+}
+main .results-alivio__content-headline + * {
+  margin-top: 33px;
+}
+main .results-alivio__content-text {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 39.25px;
+  color: #ffffff;
+}
+main .results-alivio__content-text + * {
+  margin-top: 57px;
+}
+main .results-alivio__video {
+  max-width: 895.84px;
+  position: relative;
+}
+main .results-alivio__video-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 16.33px;
+}
+main .results-alivio__video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .results-alivio__video-btn .hiden {
+  opacity: 0;
+}
+main .results-alivio__video .svg {
+  cursor: pointer;
+  fill: #ffffff;
+  transition: 0.2s ease;
+}
+main .results-alivio__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16.33px;
+}
+main .results-alivio__video:hover .svg, main .results-alivio-btn .svg {
+  fill: #245852;
 }/*# sourceMappingURL=style.css.map */
