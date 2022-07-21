@@ -103,6 +103,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  color: #424242;
 }
 
 .container {
@@ -126,11 +127,6 @@ body {
 
 .btn:hover {
   opacity: 0.9;
-}
-
-.deskription {
-  line-height: 31.4px;
-  color: #484848;
 }
 
 h1,
@@ -240,6 +236,8 @@ h4 {
 }
 .header__banner-deskription {
   max-width: 420px;
+  line-height: 31.4px;
+  color: #484848;
 }
 .header__banner-deskription + * {
   margin-top: 54px;
@@ -357,4 +355,94 @@ main .results-alivio__video iframe {
 }
 main .results-alivio__video:hover .svg, main .results-alivio-btn .svg {
   fill: #245852;
+}
+main .product {
+  padding: 120px 0 242px 0;
+}
+main .product__row {
+  display: flex;
+  justify-content: space-between;
+}
+main .product__block {
+  position: relative;
+  margin-right: 86px;
+  padding-left: 60px;
+  padding-bottom: 74px;
+}
+main .product__img {
+  border-radius: 18.11px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .product__card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 296.14px;
+  border-radius: 3.73px;
+  background-color: #ffffff;
+  box-shadow: 1px 2px 15px 5px rgba(165, 165, 165, 0.25);
+}
+main .product__card .card {
+  padding: 22px 0 30px 0;
+  color: #000000;
+  width: 296.14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .product__card .card__header {
+  text-align: center;
+}
+main .product__card .card__header-title {
+  font-weight: 700;
+  font-size: 14.49px;
+  line-height: 22.75px;
+  padding-bottom: 7.64px;
+  border-bottom: 0.75px solid #000000;
+}
+main .product__card .card__header-title + * {
+  margin-top: 13.7px;
+}
+main .product__card .card__header-username {
+  padding: 10.44px 0 20.24px;
+  font-weight: 600;
+  font-size: 11.94px;
+  line-height: 18.74px;
+}
+main .product__card .card__body {
+  text-align: left;
+}
+main .product__card .card__body-subtitle {
+  font-family: "Georgia", sans-serif;
+  font-weight: 700;
+  font-size: 15.93px;
+  line-height: 25.01px;
+}
+main .product__card .card__body-subtitle + * {
+  margin-top: 15.93px;
+}
+main .product__card .card__body-list {
+  font-weight: 400;
+  font-size: 10.62px;
+  line-height: 16.67px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+main .product__card .card__body-list li + li {
+  margin-top: 15.93px;
+}
+main .product__content {
+  max-width: 584px;
+}
+main .product__content-headline + * {
+  margin-top: 20px;
+}
+main .product__content-text {
+  max-width: 530px;
+  line-height: 31.4px;
+  color: #484848;
+}
+main .product__content-text + * {
+  margin-top: 40px;
 }/*# sourceMappingURL=style.css.map */

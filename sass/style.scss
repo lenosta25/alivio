@@ -7,6 +7,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  color: #424242;
 }
 .container {
   width: 100%;
@@ -28,11 +29,6 @@ body {
 .btn:hover {
   opacity: 0.9;
 }
-.deskription {
-  line-height: 31.4px;
-  color: #484848;
-}
-// используетмя в секции Our product
 h1,
 h2 {
   font-family: "Georgia", sans-serif;
@@ -138,6 +134,8 @@ h4 {
     }
     &-deskription {
       max-width: 420px;
+      line-height: 31.4px;
+      color: #484848;
     }
     &-deskription + * {
       margin-top: 54px;
@@ -260,6 +258,95 @@ main {
     &__video:hover .svg,
     &-btn .svg {
       fill: $bg-color;
+    }
+  }
+  .product {
+    padding: 120px 0 242px 0;
+    &__row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__block {
+      position: relative;
+      margin-right: 86px;
+      padding-left: 60px;
+      padding-bottom: 74px;
+    }
+    &__img {
+      border-radius: 18.11px;
+      object-fit: cover;
+    }
+    &__card {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 296.14px;
+      border-radius: 3.73px;
+      background-color: #ffffff;
+      box-shadow: 1px 2px 15px 5px rgba(165, 165, 165, 0.25);
+      .card {
+        padding: 22px 0 30px 0;
+        color: #000000;
+        width: 296.14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__header {
+          text-align: center;
+          &-title {
+            font-weight: 700;
+            font-size: 14.49px;
+            line-height: 22.75px;
+            padding-bottom: 7.64px;
+            border-bottom: 0.75px solid #000000;
+          }
+          &-title + * {
+            margin-top: 13.7px;
+          }
+          &-username {
+            padding: 10.44px 0 20.24px;
+            font-weight: 600;
+            font-size: 11.94px;
+            line-height: 18.74px;
+          }
+        }
+        &__body {
+          text-align: left;
+          &-subtitle {
+            font-family: "Georgia", sans-serif;
+            font-weight: 700;
+            font-size: 15.93px;
+            line-height: 25.01px;
+          }
+          &-subtitle + * {
+            margin-top: 15.93px;
+          }
+          &-list {
+            font-weight: 400;
+            font-size: 10.62px;
+            line-height: 16.67px;
+            list-style-type: disc;
+            list-style-position: inside;
+            li + li {
+              margin-top: 15.93px;
+            }
+          }
+        }
+      }
+    }
+    &__content {
+      max-width: 584px;
+      &-headline + * {
+        margin-top: 20px;
+      }
+      &-text {
+        max-width: 530px;
+        line-height: 31.4px;
+        color: #484848;
+      }
+      &-text + * {
+        margin-top: 40px;
+      }
     }
   }
 }
