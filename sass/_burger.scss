@@ -1,0 +1,49 @@
+
+.burger {
+  position: relative;
+  z-index: 9;
+  display: none;
+  height: 25px;
+  padding-left: 90px;
+  cursor: pointer;
+  &-icon,
+  &-icon::before,
+  &-icon::after {
+    display: block;
+    width: 42px;
+    height: 3px;
+    border-radius: 3px;
+    background: #01996d;
+  }
+  &-icon {
+    position: relative;
+    border: none;
+  }
+  &-icon::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: "";
+  }
+  &-icon::after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: "";
+  }
+}
+.burger-close .burger-icon {
+  background-color: transparent;
+  position: fixed;
+  right: 5px;
+}
+.burger-close .burger-icon::before {
+  width: 30px;
+  transform: rotate(45deg);
+  top: 0;
+}
+.burger-close .burger-icon::after {
+  width: 30px;
+  transform: rotate(-45deg);
+  top: 0;
+}

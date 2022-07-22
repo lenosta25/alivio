@@ -1,4 +1,6 @@
 @import "_reset.scss";
+@import "_burger.scss";
+@import "_media.scss";
 $theme-color: #01996d;
 $bg-color: #245852;
 
@@ -117,11 +119,23 @@ h4 {
   }
   &__banner {
     height: 895px;
-    background-image: url("../img/banner-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    position: relative;
+    &-bg {
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      background: #ffffff;
+      top: 0;
+      left: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
     &-content {
+      position: absolute;
       max-width: 440px;
       padding: 175px 0;
     }
@@ -261,7 +275,7 @@ main {
     }
   }
   .product {
-    padding: 120px 0 242px 0;
+    padding: 120px 0 164px 0;
     &__row {
       display: flex;
       justify-content: space-between;
@@ -361,15 +375,14 @@ main {
     font-size: 25px;
     line-height: 30px;
     color: #ffffff;
-    li+li{
+    li + li {
       margin-top: 60px;
     }
-    a{
+    a {
       transition: opacity 0.2s ease;
     }
-    a:hover{
+    a:hover {
       opacity: 0.7;
     }
   }
-  
 }

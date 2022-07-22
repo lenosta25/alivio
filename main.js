@@ -1,3 +1,12 @@
+// burger-menu
+const burger = document.querySelector(".burger");
+const mobileNav = document.querySelector(".nav");
+burger.addEventListener("click", function () {
+  mobileNav.classList.toggle("mobile-nav-active");
+  burger.classList.toggle("burger-close");
+});
+
+// video
 window.addEventListener("DOMContentLoaded", function () {
   const video = document.querySelector("#video");
   const videoBtn = document.querySelector("#video-btn");

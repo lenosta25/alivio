@@ -1,0 +1,55 @@
+@import "_style.scss";
+.nav-btn {
+   position: relative;
+   z-index: 9;
+   display: none;
+   height: 25px;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+   background: none;
+   padding-left: 90px;
+   &-icon {
+     position: relative;
+     display: block;
+     width: 42px;
+     height: 0.5px;
+     
+     border: none;
+   }
+   &-icon::before {
+     position: absolute;
+     left: 0;
+     top: -10px;
+     content: "";
+     display: block;
+     width: 42px;
+     height: 1px;
+     background-color: var(--primary-text-color);
+   }
+   &-icon::after {
+     position: absolute;
+     left: 0;
+     bottom: -10px;
+     content: "";
+     display: block;
+     width: 42px;
+     height: 1px;
+     background-color: var(--primary-text-color);
+   }
+ }
+ .nav-btn-close .nav-btn-icon {
+   background-color: transparent;
+   position: fixed;
+   right: 5px;
+ }
+ .nav-btn-close .nav-btn-icon::before {
+   width: 30px;
+   transform: rotate(45deg);
+   top: 0;
+ }
+ .nav-btn-close .nav-btn-icon::after {
+   width: 30px;
+   transform: rotate(-45deg);
+   top: 0;
+ }
