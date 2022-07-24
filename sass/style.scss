@@ -201,6 +201,7 @@ main {
       }
       &-picture {
         border-radius: 12px;
+        object-fit: cover;
       }
     }
     &__item:nth-child(2) {
