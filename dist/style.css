@@ -149,6 +149,10 @@ label {
 }
 
 @media (max-width: 1300px) {
+  body main h2 {
+    font-size: 44px;
+    line-height: 55.85px;
+  }
   body main h4 {
     padding-bottom: 20px;
     font-size: 22px;
@@ -156,13 +160,14 @@ label {
   body main .how-it-works {
     margin-top: 80px;
   }
+  body main .how-it-works .how-it-works__top h4 {
+    text-align: center;
+  }
   body main .how-it-works .how-it-works__top-group {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
   }
   body main .how-it-works .how-it-works__top-headline {
-    font-size: 44px;
-    line-height: 55.85px;
     max-width: 678px;
   }
   body main .how-it-works .how-it-works__top-text {
@@ -171,7 +176,7 @@ label {
     max-width: 678px;
   }
   body main .how-it-works .how-it-works__columns {
-    padding-top: 129px;
+    padding-top: 90px;
   }
   body main .how-it-works .how-it-works__columns .how-it-works__item {
     max-width: 350px;
@@ -186,6 +191,13 @@ label {
     font-size: 100px;
     top: -55px;
   }
+  body main .results-alivio {
+    padding: 62px 0;
+  }
+  body main .product__card .card {
+    padding: 14px 0 21px 0;
+    width: 230.14px;
+  }
 }
 @media (max-width: 1200px) {
   body main h3 {
@@ -198,15 +210,39 @@ label {
   }
   body main .how-it-works .how-it-works__columns .how-it-works__item {
     max-width: 500px;
+    text-align: center;
   }
   body main .how-it-works .how-it-works__columns .how-it-works__item:nth-child(3) {
     padding-top: 129px;
   }
-  body main .how-it-works .how-it-works__columns .how-it-works__item-picture {
-    width: 500px;
-  }
   body main .results-alivio {
     margin-top: 80px;
+  }
+  body main .results-alivio .results-alivio__row {
+    flex-direction: column-reverse;
+  }
+  body main .results-alivio .results-alivio__content {
+    max-width: 850px;
+    padding-top: 50px;
+  }
+  body main .results-alivio .results-alivio__content-headline + * {
+    margin-top: 15px;
+  }
+  body main .results-alivio .results-alivio__content-text {
+    font-size: 20px;
+  }
+  body main .results-alivio .results-alivio__content-text + * {
+    margin-top: 34px;
+  }
+  body main .product {
+    padding: 40px 0 40px 0;
+  }
+  body main .product .product__row {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  body main .product .product__row .product__block {
+    padding-top: 50px;
   }
 }
 @media (max-width: 1100px) {
@@ -219,19 +255,19 @@ label {
     font-size: 17px;
     line-height: 25px;
   }
-  .btn {
+  body .btn {
     width: 200px;
     height: 50px;
     line-height: 50px;
     font-size: 17px;
   }
-  .header__top-inner .burger {
+  body .header__top-inner .burger {
     display: block;
   }
-  .header__top-inner .nav {
+  body .header__top-inner .nav {
     display: none;
   }
-  .header__top-inner .mobile-nav-active {
+  body .header__top-inner .mobile-nav-active {
     position: fixed;
     top: 0;
     left: 0;
@@ -247,44 +283,82 @@ label {
     padding: 76px 15px;
     text-align: center;
   }
-  .header__top-inner .mobile-nav-active .nav__list {
+  body .header__top-inner .mobile-nav-active .nav__list {
     display: flex;
     flex-direction: column;
     font-size: 22px;
   }
-  .header__top-inner .mobile-nav-active .nav__list .nav__list-item + .nav__list-item {
+  body .header__top-inner .mobile-nav-active .nav__list .nav__list-item + .nav__list-item {
     padding: 0;
     margin-top: 20px;
   }
-  .header__top .header__top-inner .login {
+  body .header__top .header__top-inner .login {
     display: none;
   }
-  .header .header__banner {
+  body .header .header__banner {
     height: 600px;
   }
-  .header .header__banner-bg {
+  body .header .header__banner-bg {
     opacity: 0.6;
   }
-  .header .header__banner-content {
+  body .header .header__banner-content {
     padding: 100px 0;
   }
-  .header .header__banner-title {
+  body .header .header__banner-title {
     font-size: 50px;
     line-height: 60.85px;
   }
-  .header .header__banner-deskription {
+  body .header .header__banner-deskription {
     max-width: 350px;
+  }
+  body .results-alivio__content-headline {
+    font-size: 35px;
+    line-height: 42.85px;
+  }
+  footer {
+    padding: 60px 0 40px 0;
+  }
+  footer .footer__nav {
+    font-size: 20px;
+    line-height: 6px;
+  }
+}
+@media (max-width: 600px) {
+  body .header .header__banner {
+    height: 463px;
+  }
+  body .header .header__banner-content {
+    padding: 40px 0;
+  }
+  body main h3 {
+    font-size: 25px;
+  }
+  body main .how-it-works {
+    margin-top: 40px;
+  }
+  body main .how-it-works .how-it-works__columns .how-it-works__item-caption::before {
+    top: -41px;
+    font-size: 80px;
+  }
+  body main .product__block {
+    margin-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  body main .product__block .product__card .card {
+    display: none;
   }
 }
 @media (max-width: 500px) {
-  body main .how-it-works .how-it-works__top-headline {
+  body main h2 {
     font-size: 39px;
+    line-height: 49.85px;
   }
-  body main .how-it-works .how-it-works__columns .how-it-works__item-caption::before {
-    top: -31px;
+  body main .how-it-works .how-it-works__columns .how-it-works__item:nth-child(2) {
+    padding-top: 90px;
   }
-  body main h3 {
-    font-size: 32px;
+  body main .how-it-works .how-it-works__columns .how-it-works__item:nth-child(3) {
+    padding-top: 90px;
   }
 }
 body {
