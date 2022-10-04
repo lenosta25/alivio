@@ -1,49 +1,39 @@
-
 .burger {
+  display: none;
   position: relative;
   z-index: 9;
-  display: none;
-  height: 25px;
-  padding-left: 90px;
+  height: 26px;
+  width: 48px;
   cursor: pointer;
-  &-icon,
-  &-icon::before,
-  &-icon::after {
-    display: block;
-    width: 42px;
+  overflow-x: hidden;
+  span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 33px;
     height: 3px;
-    border-radius: 3px;
+    border-radius: 50px;
     background: #01996d;
+    transition: all 0.3s ease 0s;
+    &:first-child {
+      top: 0;
+    }
+    &:last-child {
+      top: auto;
+      bottom: 0;
+    }
   }
-  &-icon {
-    position: relative;
-    border: none;
+  &._active {
+    span {
+      transform: scale(0);
+      &:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+      }
+      &:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+      }
+    }
   }
-  &-icon::before {
-    position: absolute;
-    left: 0;
-    top: -10px;
-    content: "";
-  }
-  &-icon::after {
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    content: "";
-  }
-}
-.burger-close .burger-icon {
-  background-color: transparent;
-  position: fixed;
-  right: 5px;
-}
-.burger-close .burger-icon::before {
-  width: 30px;
-  transform: rotate(45deg);
-  top: 0;
-}
-.burger-close .burger-icon::after {
-  width: 30px;
-  transform: rotate(-45deg);
-  top: 0;
 }

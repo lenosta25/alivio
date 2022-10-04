@@ -1,9 +1,5 @@
 @media (max-width: 1300px) {
   body main {
-    h2 {
-      font-size: 44px;
-      line-height: 55.85px;
-    }
     h4 {
       padding-bottom: 20px;
       font-size: 22px;
@@ -78,9 +74,11 @@
       margin-top: 80px;
       .results-alivio__row {
         flex-direction: column-reverse;
+        max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
       }
       .results-alivio__content {
-        max-width: 850px;
         padding-top: 50px;
         &-headline + * {
           margin-top: 15px;
@@ -98,6 +96,7 @@
       .product__row {
         flex-direction: column-reverse;
         align-items: center;
+        text-align: center;
         .product__block {
           padding-top: 50px;
         }
@@ -121,19 +120,18 @@
       font-size: 17px;
     }
     .header__top-inner {
+      .logo{
+        z-index: 9;
+      }
       .burger {
         display: block;
       }
       .nav {
-        display: none;
-      }
-      .mobile-nav-active {
         position: fixed;
-        top: 0;
+        top: -400px;
         left: 0;
         z-index: 8;
         width: 100%;
-        height: 100%;
         box-shadow: 0px 1px 10px 7px rgba(71, 71, 71, 0.2);
         background-color: rgba(255, 255, 255, 1);
         display: flex;
@@ -152,34 +150,39 @@
           }
         }
       }
+      ._active {
+        top: 0;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s;
+      }
     }
     .header__top .header__top-inner .login {
       display: none;
     }
     .header .header__banner {
       height: 600px;
+      &-title{
+        max-width: 390px;
+      }
       &-bg {
         opacity: 0.6;
       }
       &-content {
         padding: 100px 0;
       }
-      &-title {
-        font-size: 50px;
-        line-height: 60.85px;
-      }
       &-deskription {
-        max-width: 350px;
+        max-width: 320px;
       }
     }
     .results-alivio__content-headline {
-      font-size: 35px;
-      line-height: 42.85px;
+      text-align: center;
     }
   }
-  footer{
+  footer {
     padding: 60px 0 40px 0;
-    .footer__nav{
+    .footer__nav {
       font-size: 20px;
       line-height: 6px;
     }
@@ -215,16 +218,12 @@
         .product__card .card {
           display: none;
         }
-      } 
+      }
     }
   }
 }
 @media (max-width: 500px) {
   body main {
-    h2 {
-      font-size: 39px;
-      line-height: 49.85px;
-    }
     .how-it-works {
       .how-it-works__columns {
         .how-it-works__item:nth-child(2) {

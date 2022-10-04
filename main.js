@@ -1,11 +1,25 @@
 // burger-menu
 const burger = document.querySelector(".burger");
 const mobileNav = document.querySelector(".nav");
+const link = document.querySelectorAll(".nav__list-item");
+const blackout = document.querySelector(".blackout");
+const body = document.body;
+
 burger.addEventListener("click", function () {
-  mobileNav.classList.toggle("mobile-nav-active");
-  burger.classList.toggle("burger-close");
+  mobileNav.classList.toggle("_active");
+ burger.classList.toggle("_active");
+ blackout.classList.toggle("_active");
+  body.classList.toggle("_disable-skroll");
 });
 
+link.forEach((e) => {
+  e.addEventListener("click", () => {
+    mobileNav.classList.remove("_active");
+    burger.classList.remove("_active");
+    blackout.classList.remove("_active");
+    body.classList.remove("_disable-skroll");
+  });
+});
 // video
 window.addEventListener("DOMContentLoaded", function () {
   const video = document.querySelector("#video");

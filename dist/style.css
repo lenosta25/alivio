@@ -99,60 +99,44 @@ label {
 }
 
 .burger {
+  display: none;
   position: relative;
   z-index: 9;
-  display: none;
-  height: 25px;
-  padding-left: 90px;
+  height: 26px;
+  width: 48px;
   cursor: pointer;
+  overflow-x: hidden;
 }
-.burger-icon, .burger-icon::before, .burger-icon::after {
-  display: block;
-  width: 42px;
+.burger span {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 33px;
   height: 3px;
-  border-radius: 3px;
+  border-radius: 50px;
   background: #01996d;
+  transition: all 0.3s ease 0s;
 }
-.burger-icon {
-  position: relative;
-  border: none;
-}
-.burger-icon::before {
-  position: absolute;
-  left: 0;
-  top: -10px;
-  content: "";
-}
-.burger-icon::after {
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  content: "";
-}
-
-.burger-close .burger-icon {
-  background-color: transparent;
-  position: fixed;
-  right: 5px;
-}
-
-.burger-close .burger-icon::before {
-  width: 30px;
-  transform: rotate(45deg);
+.burger span:first-child {
   top: 0;
 }
-
-.burger-close .burger-icon::after {
-  width: 30px;
+.burger span:last-child {
+  top: auto;
+  bottom: 0;
+}
+.burger._active span {
+  transform: scale(0);
+}
+.burger._active span:first-child {
   transform: rotate(-45deg);
-  top: 0;
+  top: calc(50% - 1px);
+}
+.burger._active span:last-child {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
 }
 
 @media (max-width: 1300px) {
-  body main h2 {
-    font-size: 44px;
-    line-height: 55.85px;
-  }
   body main h4 {
     padding-bottom: 20px;
     font-size: 22px;
@@ -220,9 +204,11 @@ label {
   }
   body main .results-alivio .results-alivio__row {
     flex-direction: column-reverse;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
   }
   body main .results-alivio .results-alivio__content {
-    max-width: 850px;
     padding-top: 50px;
   }
   body main .results-alivio .results-alivio__content-headline + * {
@@ -240,6 +226,7 @@ label {
   body main .product .product__row {
     flex-direction: column-reverse;
     align-items: center;
+    text-align: center;
   }
   body main .product .product__row .product__block {
     padding-top: 50px;
@@ -261,19 +248,18 @@ label {
     line-height: 50px;
     font-size: 17px;
   }
+  body .header__top-inner .logo {
+    z-index: 9;
+  }
   body .header__top-inner .burger {
     display: block;
   }
   body .header__top-inner .nav {
-    display: none;
-  }
-  body .header__top-inner .mobile-nav-active {
     position: fixed;
-    top: 0;
+    top: -400px;
     left: 0;
     z-index: 8;
     width: 100%;
-    height: 100%;
     box-shadow: 0px 1px 10px 7px rgba(71, 71, 71, 0.2);
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -283,14 +269,18 @@ label {
     padding: 76px 15px;
     text-align: center;
   }
-  body .header__top-inner .mobile-nav-active .nav__list {
+  body .header__top-inner .nav .nav__list {
     display: flex;
     flex-direction: column;
     font-size: 22px;
   }
-  body .header__top-inner .mobile-nav-active .nav__list .nav__list-item + .nav__list-item {
+  body .header__top-inner .nav .nav__list .nav__list-item + .nav__list-item {
     padding: 0;
     margin-top: 20px;
+  }
+  body .header__top-inner ._active {
+    top: 0;
+    transition: 0.4s;
   }
   body .header__top .header__top-inner .login {
     display: none;
@@ -298,22 +288,20 @@ label {
   body .header .header__banner {
     height: 600px;
   }
+  body .header .header__banner-title {
+    max-width: 390px;
+  }
   body .header .header__banner-bg {
     opacity: 0.6;
   }
   body .header .header__banner-content {
     padding: 100px 0;
   }
-  body .header .header__banner-title {
-    font-size: 50px;
-    line-height: 60.85px;
-  }
   body .header .header__banner-deskription {
-    max-width: 350px;
+    max-width: 320px;
   }
   body .results-alivio__content-headline {
-    font-size: 35px;
-    line-height: 42.85px;
+    text-align: center;
   }
   footer {
     padding: 60px 0 40px 0;
@@ -350,10 +338,6 @@ label {
   }
 }
 @media (max-width: 500px) {
-  body main h2 {
-    font-size: 39px;
-    line-height: 49.85px;
-  }
   body main .how-it-works .how-it-works__columns .how-it-works__item:nth-child(2) {
     padding-top: 90px;
   }
@@ -367,6 +351,10 @@ body {
   font-size: 20px;
   line-height: 30px;
   color: #424242;
+}
+
+._disable-skroll {
+  overflow: hidden;
 }
 
 .container {
@@ -400,8 +388,8 @@ h2 {
 }
 
 h2 {
-  font-size: 50px;
-  line-height: 78.5px;
+  font-size: clamp(1.875rem, 1.494rem + 1.9vw, 3.125rem);
+  line-height: clamp(2.375rem, 1.604rem + 3.86vw, 4.906rem);
 }
 
 h3 {
@@ -417,6 +405,20 @@ h4 {
   font-size: 24px;
   line-height: 37.68px;
   color: #424242;
+}
+
+.blackout {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+}
+.blackout._active {
+  display: block;
 }
 
 .header__top {
@@ -504,8 +506,8 @@ h4 {
   padding: 175px 0;
 }
 .header__banner-title {
-  font-size: 65px;
-  line-height: 73.85px;
+  font-size: clamp(2.5rem, 2.024rem + 2.38vw, 4.063rem);
+  line-height: clamp(3.438rem, 3.095rem + 1.71vw, 4.563rem);
 }
 .header__banner-title + * {
   margin-top: 30px;
